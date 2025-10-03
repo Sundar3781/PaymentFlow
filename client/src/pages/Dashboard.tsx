@@ -13,50 +13,50 @@ export default function Dashboard() {
   const mockRequests: PaymentRequest[] = [
     {
       id: "REQ-001",
-      amount: 5000,
-      description: "Office supplies and equipment for Q1 2024",
-      requester: "John Smith",
-      head: "operations",
+      amount: 25000,
+      description: "Daily wage payment for workers",
+      requester: "Accounts Team",
+      head: "wages",
       group: "team-a",
       status: "pending",
       date: "2024-01-15"
     },
     {
       id: "REQ-002",
-      amount: 12500,
-      description: "Marketing campaign budget",
-      requester: "Sarah Johnson",
-      head: "marketing",
-      group: "team-b",
+      amount: 15000,
+      description: "Diesel fuel for machinery",
+      requester: "Accounts Team",
+      head: "fuel",
+      group: "team-a",
       status: "paid",
       date: "2024-01-14"
     },
     {
       id: "REQ-003",
-      amount: 3200,
-      description: "Software licenses renewal",
-      requester: "Mike Chen",
-      head: "it",
-      group: "team-c",
+      amount: 45000,
+      description: "Construction materials purchase",
+      requester: "Accounts Team",
+      head: "materials",
+      group: "team-b",
       status: "unpaid",
       date: "2024-01-13"
     },
     {
       id: "REQ-004",
-      amount: 8750,
-      description: "Consultant fees for project management",
-      requester: "Emily Davis",
-      head: "hr",
-      group: "consultants",
+      amount: 8500,
+      description: "Office supplies and stationery",
+      requester: "Accounts Team",
+      head: "petty-cash",
+      group: "team-a",
       status: "pending",
       date: "2024-01-12"
     },
     {
       id: "REQ-005",
-      amount: 2100,
-      description: "Cloud infrastructure costs",
-      requester: "David Wilson",
-      head: "it",
+      amount: 120000,
+      description: "Monthly salary disbursement",
+      requester: "Accounts Team",
+      head: "salaries",
       group: "team-a",
       status: "paid",
       date: "2024-01-11"
@@ -92,13 +92,13 @@ export default function Dashboard() {
         />
         <StatCard
           title="Total Paid"
-          value="$124,500"
+          value="₹8,45,500"
           icon={CheckCircle}
           trend={{ value: "+8% from last month", isPositive: true }}
         />
         <StatCard
           title="Total Unpaid"
-          value="$45,200"
+          value="₹3,25,200"
           icon={XCircle}
           trend={{ value: "-3% from last month", isPositive: true }}
         />

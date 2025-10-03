@@ -14,44 +14,76 @@ export default function Reports() {
   //todo: remove mock functionality
   const reportData = [
     {
-      category: "Marketing",
-      totalRequests: 24,
-      totalAmount: 125000,
-      paid: 85000,
-      unpaid: 40000,
-      pending: 0
+      category: "Wages",
+      totalRequests: 45,
+      totalAmount: 450000,
+      paid: 320000,
+      unpaid: 80000,
+      pending: 50000
     },
     {
-      category: "Operations",
-      totalRequests: 18,
-      totalAmount: 95000,
-      paid: 65000,
-      unpaid: 15000,
-      pending: 15000
+      category: "Salaries",
+      totalRequests: 12,
+      totalAmount: 1440000,
+      paid: 1200000,
+      unpaid: 120000,
+      pending: 120000
     },
     {
-      category: "IT",
-      totalRequests: 32,
+      category: "Fuel",
+      totalRequests: 28,
       totalAmount: 180000,
       paid: 120000,
       unpaid: 35000,
       pending: 25000
     },
     {
-      category: "HR",
-      totalRequests: 15,
-      totalAmount: 72000,
-      paid: 50000,
-      unpaid: 12000,
-      pending: 10000
+      category: "Materials",
+      totalRequests: 35,
+      totalAmount: 525000,
+      paid: 350000,
+      unpaid: 125000,
+      pending: 50000
     },
     {
-      category: "Finance",
-      totalRequests: 12,
-      totalAmount: 58000,
-      paid: 45000,
-      unpaid: 8000,
-      pending: 5000
+      category: "Fertiliser",
+      totalRequests: 18,
+      totalAmount: 270000,
+      paid: 180000,
+      unpaid: 60000,
+      pending: 30000
+    },
+    {
+      category: "Equipment Rental",
+      totalRequests: 22,
+      totalAmount: 330000,
+      paid: 220000,
+      unpaid: 70000,
+      pending: 40000
+    },
+    {
+      category: "Purchases",
+      totalRequests: 40,
+      totalAmount: 600000,
+      paid: 400000,
+      unpaid: 150000,
+      pending: 50000
+    },
+    {
+      category: "Petty Cash",
+      totalRequests: 65,
+      totalAmount: 195000,
+      paid: 130000,
+      unpaid: 45000,
+      pending: 20000
+    },
+    {
+      category: "Miscellaneous",
+      totalRequests: 25,
+      totalAmount: 125000,
+      paid: 80000,
+      unpaid: 30000,
+      pending: 15000
     }
   ];
 
@@ -92,7 +124,7 @@ export default function Reports() {
             <CardTitle className="text-sm font-medium text-muted-foreground">Total Amount</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold font-mono" data-testid="text-total-amount">${totalAmount.toLocaleString()}</div>
+            <div className="text-2xl font-bold font-mono" data-testid="text-total-amount">₹{totalAmount.toLocaleString()}</div>
           </CardContent>
         </Card>
         <Card className="hover-elevate">
@@ -100,7 +132,7 @@ export default function Reports() {
             <CardTitle className="text-sm font-medium text-muted-foreground">Total Paid</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold font-mono text-success" data-testid="text-total-paid">${totalPaid.toLocaleString()}</div>
+            <div className="text-2xl font-bold font-mono text-success" data-testid="text-total-paid">₹{totalPaid.toLocaleString()}</div>
           </CardContent>
         </Card>
         <Card className="hover-elevate">
@@ -108,7 +140,7 @@ export default function Reports() {
             <CardTitle className="text-sm font-medium text-muted-foreground">Total Unpaid</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold font-mono text-destructive" data-testid="text-total-unpaid">${totalUnpaid.toLocaleString()}</div>
+            <div className="text-2xl font-bold font-mono text-destructive" data-testid="text-total-unpaid">₹{totalUnpaid.toLocaleString()}</div>
           </CardContent>
         </Card>
         <Card className="hover-elevate">
@@ -116,7 +148,7 @@ export default function Reports() {
             <CardTitle className="text-sm font-medium text-muted-foreground">Total Pending</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold font-mono text-warning" data-testid="text-total-pending">${totalPending.toLocaleString()}</div>
+            <div className="text-2xl font-bold font-mono text-warning" data-testid="text-total-pending">₹{totalPending.toLocaleString()}</div>
           </CardContent>
         </Card>
       </div>
@@ -140,19 +172,19 @@ export default function Reports() {
                 <TableRow key={row.category} className="hover-elevate" data-testid={`row-report-${row.category.toLowerCase()}`}>
                   <TableCell className="font-medium">{row.category}</TableCell>
                   <TableCell className="text-right">{row.totalRequests}</TableCell>
-                  <TableCell className="text-right font-mono">${row.totalAmount.toLocaleString()}</TableCell>
-                  <TableCell className="text-right font-mono text-success">${row.paid.toLocaleString()}</TableCell>
-                  <TableCell className="text-right font-mono text-destructive">${row.unpaid.toLocaleString()}</TableCell>
-                  <TableCell className="text-right font-mono text-warning">${row.pending.toLocaleString()}</TableCell>
+                  <TableCell className="text-right font-mono">₹{row.totalAmount.toLocaleString()}</TableCell>
+                  <TableCell className="text-right font-mono text-success">₹{row.paid.toLocaleString()}</TableCell>
+                  <TableCell className="text-right font-mono text-destructive">₹{row.unpaid.toLocaleString()}</TableCell>
+                  <TableCell className="text-right font-mono text-warning">₹{row.pending.toLocaleString()}</TableCell>
                 </TableRow>
               ))}
               <TableRow className="font-semibold bg-muted/30">
                 <TableCell>Total</TableCell>
                 <TableCell className="text-right">{reportData.reduce((sum, row) => sum + row.totalRequests, 0)}</TableCell>
-                <TableCell className="text-right font-mono">${totalAmount.toLocaleString()}</TableCell>
-                <TableCell className="text-right font-mono text-success">${totalPaid.toLocaleString()}</TableCell>
-                <TableCell className="text-right font-mono text-destructive">${totalUnpaid.toLocaleString()}</TableCell>
-                <TableCell className="text-right font-mono text-warning">${totalPending.toLocaleString()}</TableCell>
+                <TableCell className="text-right font-mono">₹{totalAmount.toLocaleString()}</TableCell>
+                <TableCell className="text-right font-mono text-success">₹{totalPaid.toLocaleString()}</TableCell>
+                <TableCell className="text-right font-mono text-destructive">₹{totalUnpaid.toLocaleString()}</TableCell>
+                <TableCell className="text-right font-mono text-warning">₹{totalPending.toLocaleString()}</TableCell>
               </TableRow>
             </TableBody>
           </Table>

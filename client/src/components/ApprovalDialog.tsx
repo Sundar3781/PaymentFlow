@@ -68,7 +68,7 @@ export function ApprovalDialog({ request, open, onOpenChange, onApprove, onRejec
           <div className="grid grid-cols-2 gap-4">
             <div>
               <Label className="text-xs text-muted-foreground">Amount</Label>
-              <p className="text-2xl font-bold font-mono" data-testid="text-request-amount">${request.amount.toLocaleString()}</p>
+              <p className="text-2xl font-bold font-mono" data-testid="text-request-amount">₹{request.amount.toLocaleString()}</p>
             </div>
             <div>
               <Label className="text-xs text-muted-foreground">Status</Label>

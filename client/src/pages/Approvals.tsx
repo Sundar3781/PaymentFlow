@@ -12,30 +12,30 @@ export default function Approvals() {
   const pendingRequests: PaymentRequest[] = [
     {
       id: "REQ-001",
-      amount: 5000,
-      description: "Office supplies and equipment for Q1 2024",
-      requester: "John Smith",
-      head: "operations",
+      amount: 25000,
+      description: "Daily wage payment for workers",
+      requester: "Accounts Team",
+      head: "wages",
       group: "team-a",
       status: "pending",
       date: "2024-01-15"
     },
     {
       id: "REQ-004",
-      amount: 8750,
-      description: "Consultant fees for project management",
-      requester: "Emily Davis",
-      head: "hr",
-      group: "consultants",
+      amount: 8500,
+      description: "Office supplies and stationery",
+      requester: "Accounts Team",
+      head: "petty-cash",
+      group: "team-a",
       status: "pending",
       date: "2024-01-12"
     },
     {
       id: "REQ-007",
-      amount: 4500,
-      description: "Employee training and development",
-      requester: "Tom Anderson",
-      head: "hr",
+      amount: 18000,
+      description: "Heavy machinery rental charges",
+      requester: "Accounts Team",
+      head: "equipment-rental",
       group: "team-c",
       status: "pending",
       date: "2024-01-09"
@@ -70,7 +70,7 @@ export default function Approvals() {
             <CardTitle className="text-sm font-medium text-muted-foreground">Total Amount</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold font-mono" data-testid="text-pending-amount">${totalPendingAmount.toLocaleString()}</div>
+            <div className="text-2xl font-bold font-mono" data-testid="text-pending-amount">₹{totalPendingAmount.toLocaleString()}</div>
           </CardContent>
         </Card>
         <Card className="hover-elevate">

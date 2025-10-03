@@ -122,11 +122,15 @@ export function ReportFilters({ onFilterChange, onExport }: ReportFiltersProps) 
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">All Heads</SelectItem>
-              <SelectItem value="marketing">Marketing</SelectItem>
-              <SelectItem value="operations">Operations</SelectItem>
-              <SelectItem value="hr">Human Resources</SelectItem>
-              <SelectItem value="it">IT</SelectItem>
-              <SelectItem value="finance">Finance</SelectItem>
+              <SelectItem value="wages">Wages</SelectItem>
+              <SelectItem value="petty-cash">Petty Cash</SelectItem>
+              <SelectItem value="salaries">Salaries</SelectItem>
+              <SelectItem value="fuel">Fuel</SelectItem>
+              <SelectItem value="materials">Materials</SelectItem>
+              <SelectItem value="fertiliser">Fertiliser</SelectItem>
+              <SelectItem value="equipment-rental">Equipment Rental</SelectItem>
+              <SelectItem value="purchases">Purchases</SelectItem>
+              <SelectItem value="miscellaneous">Miscellaneous</SelectItem>
             </SelectContent>
           </Select>
         </div>

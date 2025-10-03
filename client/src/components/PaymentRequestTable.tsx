@@ -62,7 +62,7 @@ export function PaymentRequestTable({ requests, onViewDetails, onMarkPaid, onMar
               <TableRow key={request.id} className="hover-elevate" data-testid={`row-request-${request.id}`}>
                 <TableCell className="font-mono font-medium" data-testid="text-request-id">{request.id}</TableCell>
                 <TableCell className="max-w-[300px] truncate" data-testid="text-request-description">{request.description}</TableCell>
-                <TableCell className="text-right font-mono" data-testid="text-request-amount">${request.amount.toLocaleString()}</TableCell>
+                <TableCell className="text-right font-mono" data-testid="text-request-amount">₹{request.amount.toLocaleString()}</TableCell>
                 <TableCell data-testid="text-request-requester">{request.requester}</TableCell>
                 <TableCell className="capitalize" data-testid="text-request-head">{request.head}</TableCell>
                 <TableCell>
