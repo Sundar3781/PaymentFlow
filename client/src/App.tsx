@@ -10,6 +10,11 @@ import Requests from "@/pages/Requests";
 import Approvals from "@/pages/Approvals";
 import Reports from "@/pages/Reports";
 import Settings from "@/pages/Settings";
+import PurchaseDashboard from "@/pages/purchases/PurchaseDashboard";
+import PurchaseRequests from "@/pages/purchases/PurchaseRequests";
+import PurchaseApprovals from "@/pages/purchases/PurchaseApprovals";
+import Quotations from "@/pages/purchases/Quotations";
+import PurchaseOrders from "@/pages/purchases/PurchaseOrders";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -20,6 +25,11 @@ function Router() {
       <Route path="/approvals" component={Approvals} />
       <Route path="/reports" component={Reports} />
       <Route path="/settings" component={Settings} />
+      <Route path="/purchases" component={PurchaseDashboard} />
+      <Route path="/purchases/requests" component={PurchaseRequests} />
+      <Route path="/purchases/approvals" component={PurchaseApprovals} />
+      <Route path="/purchases/quotations" component={Quotations} />
+      <Route path="/purchases/orders" component={PurchaseOrders} />
       <Route component={NotFound} />
     </Switch>
   );
